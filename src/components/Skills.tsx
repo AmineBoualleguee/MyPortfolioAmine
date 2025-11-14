@@ -12,8 +12,8 @@ const Skills = () => {
     },
     {
       icon: Globe,
-      title: "Développement Web",
-      skills: ["Angular", "Spring Boot", "Node.js", "Express.js"],
+      title: "Frameworks",
+      skills: ["Angular", "React", "FastAPI", "Spring Boot", "Node.js", "Express.js"],
       color: "text-accent"
     },
     {
@@ -24,14 +24,14 @@ const Skills = () => {
     },
     {
       icon: Wrench,
-      title: "Outils",
+      title: "Outils & DevOps",
       skills: ["Docker", "Maven", "Git"],
       color: "text-primary-glow"
     },
     {
       icon: Brain,
-      title: "Intelligence Artificielle",
-      skills: ["NLP", "Deep Learning", "TensorFlow", "PyTorch", "Transformers", "Hugging Face", "Ollama"],
+      title: "IA / Machine Learning",
+      skills: ["TensorFlow", "PyTorch", "Transformers", "YOLOv8", "OpenCV", "Hugging Face", "Ollama"],
       color: "text-accent"
     },
     {

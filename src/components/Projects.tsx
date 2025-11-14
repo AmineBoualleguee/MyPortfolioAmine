@@ -1,61 +1,65 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Code, Calendar, Users, BarChart3, Bot, Zap, Car } from "lucide-react";
+import { ExternalLink, Code, Calendar, Users, BarChart3, Bot, Zap, Car, Activity } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
-      icon: BarChart3,
-      title: "Application Web de Gestion",
-      type: "Projet de Fin d'Études – Licence",
-      year: "2023",
-      description: "Développement d'une application web complète de gestion d'entreprise incluant facturation, devis, congés, structure d'entreprise, clients et notes de frais. Accent mis sur une interface utilisateur intuitive.",
-      technologies: ["Angular", "Spring Boot", "MySQL"],
+      icon: Activity,
+      title: "Application HealthVision",
+      type: "Projet Intégré",
+      year: "2025",
+      period: "Août - Oct",
+      description: "Application web intelligente utilisant l'IA pour assister les professionnels de santé dans la détection de fractures sur des images radiographiques.",
+      technologies: ["DeepLearning", "React", "FastAPI", "Python", "YOLOv8", "OpenCV", "Grad-CAM", "Docker"],
       color: "text-primary"
+    },
+    {
+      icon: Bot,
+      title: "IA – Résumeur et Traducteur Automatique Multimodal",
+      type: "Projet IA",
+      year: "2025",
+      period: "Avr - Juil",
+      description: "Application d'IA capable de résumer automatiquement vidéos et textes, avec traduction multilingue et génération de sous-titres. Intégration d'un module d'évaluation linguistique. Basée sur des modèles avancés de NLP et Deep Learning, avec inférences locales via Hugging Face et Ollama.",
+      technologies: ["Python", "Transformers", "TensorFlow", "PyTorch", "Ollama"],
+      color: "text-secondary"
     },
     {
       icon: Users,
       title: "Plateforme Medicollab",
       type: "Projet Intégré",
-      year: "2024",
-      description: "Plateforme web facilitant la collaboration entre médecins et la gestion sécurisée des dossiers médicaux électroniques. Intégration de mesures avancées de protection des données.",
+      year: "2025",
+      period: "Fév - Avr",
+      description: "Plateforme web facilitant la collaboration entre médecins et la gestion sécurisée des dossiers médicaux électroniques. Intégration de mesures de protection des données.",
       technologies: ["Angular", "Node.js", "Express.js", "PostgreSQL"],
       color: "text-accent"
     },
     {
-      icon: Bot,
-      title: "Projets Intelligence Artificielle",
-      type: "Projets Académiques",
-      year: "2024",
-      description: "Développement d'un résumeur automatique pour vidéos et documents, système de traduction vidéo avec sous-titres multilingues, et module de test linguistique pour évaluer le niveau de langue.",
-      technologies: ["Python", "Transformers", "TensorFlow", "PyTorch", "Ollama"],
-      color: "text-secondary"
-    },
-    {
-      icon: Zap,
-      title: "Application Météo",
-      type: "Projet Personnel",
+      icon: BarChart3,
+      title: "Application Web de Gestion d'Entreprise",
+      type: "Projet de Fin d'Études – Licence",
       year: "2023",
-      description: "Application permettant la consultation de la météo mondiale et des prévisions détaillées via intégration d'API externes. Interface moderne et responsive.",
-      technologies: ["Python"],
+      period: "Jan - Mai",
+      description: "Application web pour gérer la facturation, les devis, les congés, la structure de l'entreprise, les clients et les notes de frais, avec un accent sur l'interface utilisateur intuitive.",
+      technologies: ["Angular", "Spring Boot", "MySQL"],
       color: "text-primary-glow"
     },
     {
       icon: BarChart3,
-      title: "Suivi COVID-19",
+      title: "Application Suiveur Corona",
       type: "Projet Académique",
       year: "2022",
-      description: "Application de visualisation des données COVID-19 avec diagrammes interactifs et tableaux de bord en temps réel pour le suivi des statistiques mondiales.",
+      description: "Application de visualisation des données COVID-19 à l'aide d'organigrammes interactifs.",
       technologies: ["Java"],
       color: "text-accent"
     },
     {
       icon: Car,
-      title: "Voiture Pilotée Mobile",
+      title: "Voiture Pilotée avec Application Mobile",
       type: "Hackathon",
-      year: "2023",
-      description: "Application mobile pour contrôler une voiture prototype intégrant des capteurs embarqués. Projet développé lors d'un hackathon avec système de pilotage à distance.",
+      year: "2022",
+      description: "Application mobile pour contrôler une voiture prototype lors d'un hackathon, intégrant des capteurs embarqués.",
       technologies: ["Python", "Arduino Uno", "Raspberry Pi Pico"],
       color: "text-secondary"
     }
@@ -83,7 +87,7 @@ const Projects = () => {
                     <project.icon className="w-5 h-5" />
                   </div>
                   <Badge variant="secondary" className="text-xs">
-                    {project.year}
+                    {project.period || project.year}
                   </Badge>
                 </div>
                 <CardTitle className="text-lg leading-tight">{project.title}</CardTitle>
