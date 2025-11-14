@@ -24,20 +24,19 @@ const About = () => {
           {/* Profile Description */}
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Étudiant en 3ᵉ année d'ingénierie informatique à l'<strong className="text-foreground">Institut 
-              Supérieur d'Informatique et des Technologies de Communication de Sousse</strong>, 
-              je me passionne pour les technologies émergentes et leur application pratique.
+              Étudiant en dernière année d'ingénierie informatique à l'<strong className="text-foreground">ISITCOM Sousse</strong>, 
+              passionné par le développement logiciel, l'intelligence artificielle et le cloud computing.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Compétent dans le développement full-stack avec <strong className="text-primary">Java</strong>, 
+              Solides compétences en <strong className="text-primary">Java</strong>, 
               <strong className="text-primary"> Angular</strong> et <strong className="text-primary">Spring Boot</strong>, 
-              je cherche constamment à élargir mes compétences dans le domaine du numérique.
+              avec une expérience pratique sur des projets IA et full-stack.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
               Actuellement à la recherche d'un <strong className="text-accent">stage de fin d'études (PFE)</strong> 
-              pour mettre en pratique mes connaissances et contribuer à des projets innovants.
+              pour mettre en œuvre mes connaissances dans un environnement innovant.
             </p>
           </div>
           

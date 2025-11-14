@@ -6,9 +6,9 @@ const Education = () => {
   const education = [
     {
       degree: "Diplôme National d'Ingénieur en Informatique",
-      institution: "Institut Supérieur d'Informatique et des Technologies de Communication",
+      institution: "Institut Supérieur d'Informatique et des Technologies de Communication de Sousse",
       location: "Sousse",
-      period: "2023 – présent",
+      period: "Sept 2023 – Présent",
       status: "En cours",
       color: "text-primary"
     },
@@ -16,7 +16,7 @@ const Education = () => {
       degree: "Licence en Génie Logiciel",
       institution: "Faculté des Sciences de Gafsa",
       location: "Gafsa", 
-      period: "2020 – 2023",
+      period: "Sept 2020 – Juin 2023",
       status: "Obtenu",
       color: "text-accent"
     },
@@ -24,7 +24,7 @@ const Education = () => {
       degree: "Baccalauréat en Sciences Expérimentales",
       institution: "Lycée Ibn Khaldoun",
       location: "Sidi Aich, Gafsa",
-      period: "2020",
+      period: "Juin 2020",
       status: "Obtenu",
       color: "text-secondary"
     }

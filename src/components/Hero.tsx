@@ -36,15 +36,15 @@ const Hero = () => {
           
           {/* Specialization */}
           <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Étudiant en 3ᵉ année d'ingénierie informatique, passionné par le développement logiciel, 
-            la cybersécurité, le cloud et l'intelligence artificielle
+            Étudiant en dernière année d'ingénierie informatique, passionné par le développement logiciel, 
+            l'intelligence artificielle et le cloud computing
           </p>
           
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm md:text-base text-muted-foreground">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-primary" />
-              <span>Sidi Aich, Gafsa – Tunisie</span>
+              <span>Sousse, Tunisie</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-primary" />
