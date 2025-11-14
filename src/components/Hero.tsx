@@ -58,22 +58,49 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="px-8 py-3 text-lg shadow-button">
-              <Download className="w-5 h-5 mr-2" />
-              Télécharger CV
+            <Button 
+              size="lg" 
+              className="px-8 py-3 text-lg shadow-button"
+              asChild
+            >
+              <a href="/Amine_Bouallegue_CV.pdf" download="Amine_Bouallegue_CV.pdf">
+                <Download className="w-5 h-5 mr-2" />
+                Télécharger CV
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-3 text-lg">
-              Voir mes projets
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="px-8 py-3 text-lg"
+              asChild
+            >
+              <a href="#projects">
+                Voir mes projets
+              </a>
             </Button>
           </div>
           
           {/* Social Links */}
           <div className="flex justify-center gap-6">
-            <Button variant="ghost" size="icon" className="w-12 h-12 rounded-full hover:bg-primary/10 transition-smooth">
-              <Linkedin className="w-6 h-6 text-primary" />
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="w-12 h-12 rounded-full hover:bg-primary/10 transition-smooth"
+              asChild
+            >
+              <a href="https://www.linkedin.com/in/amine-bouallegue" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-6 h-6 text-primary" />
+              </a>
             </Button>
-            <Button variant="ghost" size="icon" className="w-12 h-12 rounded-full hover:bg-primary/10 transition-smooth">
-              <Github className="w-6 h-6 text-primary" />
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="w-12 h-12 rounded-full hover:bg-primary/10 transition-smooth"
+              asChild
+            >
+              <a href="https://github.com/amine-bouallegue" target="_blank" rel="noopener noreferrer">
+                <Github className="w-6 h-6 text-primary" />
+              </a>
             </Button>
           </div>
         </div>
