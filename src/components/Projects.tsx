@@ -8,60 +8,52 @@ const Projects = () => {
     {
       icon: Activity,
       title: "Application HealthVision",
-      type: "Projet Intégré",
+      type: "Projet d'IA Médicale Avancée",
       year: "2025",
-      period: "Août - Oct",
-      description: "Application web intelligente utilisant l'IA pour assister les professionnels de santé dans la détection de fractures sur des images radiographiques.",
-      technologies: ["DeepLearning", "React", "FastAPI", "Python", "YOLOv8", "OpenCV", "Grad-CAM", "Docker"],
+      period: "Août - Oct 2025",
+      description: "Conception et développement d'une application web intelligente utilisant l'IA pour assister les professionnels de santé dans la détection automatique de fractures sur des images radiographiques. Mise en place d'un pipeline complet d'inférence incluant prétraitement d'images, détection YOLOv8, visualisation explicable via Grad-CAM.",
+      technologies: ["React", "Node.js", "Express.js", "PostgreSQL", "Deep Learning", "YOLOv8", "OpenCV", "Grad-CAM", "Python", "FastAPI", "Docker"],
       color: "text-primary"
     },
     {
       icon: Bot,
-      title: "IA – Résumeur et Traducteur Automatique Multimodal",
+      title: "IA Résumeur et Traducteur Automatique Multimodal",
       type: "Projet IA",
       year: "2025",
-      period: "Avr - Juil",
-      description: "Application d'IA capable de résumer automatiquement vidéos et textes, avec traduction multilingue et génération de sous-titres. Intégration d'un module d'évaluation linguistique. Basée sur des modèles avancés de NLP et Deep Learning, avec inférences locales via Hugging Face et Ollama.",
-      technologies: ["Python", "Transformers", "TensorFlow", "PyTorch", "Ollama"],
+      period: "Avr - Juil 2025",
+      description: "Développement d'une application d'IA capable de résumer automatiquement des vidéos et textes, générer des sous-titres et assurer la traduction multilingue. Intégration de modèles NLP avancés et d'un module d'évaluation linguistique pour tester le niveau des utilisateurs.",
+      technologies: ["Python", "Transformers", "TensorFlow", "PyTorch", "Hugging Face", "Ollama"],
       color: "text-secondary"
     },
     {
       icon: Users,
       title: "Plateforme Medicollab",
-      type: "Projet Intégré",
+      type: "Solution Web Sécurisée de Collaboration Médicale",
       year: "2025",
-      period: "Fév - Avr",
-      description: "Plateforme web facilitant la collaboration entre médecins et la gestion sécurisée des dossiers médicaux électroniques. Intégration de mesures de protection des données.",
+      period: "Fév - Avr 2025",
+      description: "Développement d'une plateforme web facilitant la collaboration entre médecins et la gestion sécurisée des dossiers médicaux électroniques. Participation à la conception backend, APIs REST, modèles de données et intégration PostgreSQL avec un fort accent sur la protection des données.",
       technologies: ["Angular", "Node.js", "Express.js", "PostgreSQL"],
       color: "text-accent"
+    },
+    {
+      icon: Zap,
+      title: "EcoSynk",
+      type: "Plateforme IA d'Économie Circulaire",
+      year: "2024",
+      period: "2024",
+      description: "Développement d'une plateforme intelligente dédiée à la réduction des déchets et à la promotion de l'économie circulaire via un marketplace multi-acteurs (C2C, B2B, B2C). Conception et implémentation d'une architecture full-stack moderne intégrant des fonctionnalités avancées d'intelligence artificielle.",
+      technologies: ["React", "Node.js", "Express.js", "PostgreSQL", "Python", "TensorFlow"],
+      color: "text-primary-glow"
     },
     {
       icon: BarChart3,
       title: "Application Web de Gestion d'Entreprise",
       type: "Projet de Fin d'Études – Licence",
       year: "2023",
-      period: "Jan - Mai",
-      description: "Application web pour gérer la facturation, les devis, les congés, la structure de l'entreprise, les clients et les notes de frais, avec un accent sur l'interface utilisateur intuitive.",
+      period: "Jan - Mai 2023",
+      description: "Développement d'une application web pour la gestion de la facturation, des devis, des congés, de la structure interne, des clients et des notes de frais. Conception UML, modèles de données, modules CRUD et automatisation des processus internes avec une interface utilisateur ergonomique.",
       technologies: ["Angular", "Spring Boot", "MySQL"],
-      color: "text-primary-glow"
-    },
-    {
-      icon: BarChart3,
-      title: "Application Suiveur Corona",
-      type: "Projet Académique",
-      year: "2022",
-      description: "Application de visualisation des données COVID-19 à l'aide d'organigrammes interactifs.",
-      technologies: ["Java"],
       color: "text-accent"
-    },
-    {
-      icon: Car,
-      title: "Voiture Pilotée avec Application Mobile",
-      type: "Hackathon",
-      year: "2022",
-      description: "Application mobile pour contrôler une voiture prototype lors d'un hackathon, intégrant des capteurs embarqués.",
-      technologies: ["Python", "Arduino Uno", "Raspberry Pi Pico"],
-      color: "text-secondary"
     }
   ];
 
