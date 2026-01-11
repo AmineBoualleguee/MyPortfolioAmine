@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Code, Calendar, Users, BarChart3, Bot, Zap, Car, Activity } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
@@ -57,10 +58,31 @@ const Projects = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   return (
-    <section className="py-20 px-6 bg-muted/20">
+    <section id="projects" className="py-20 px-6 bg-muted/20">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <Badge variant="outline" className="mb-4 px-4 py-2">
             Portfolio
           </Badge>
@@ -68,42 +90,59 @@ const Projects = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Découvrez mes projets académiques et personnels qui démontrent ma passion pour la technologie
           </p>
-        </div>
+        </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {projects.map((project, index) => (
-            <Card key={index} className="shadow-card border-card-border hover:shadow-glow transition-smooth group overflow-hidden">
-              <CardHeader className="pb-4">
-                <div className="flex items-start justify-between mb-3">
-                  <div className={`inline-flex p-2 rounded-lg bg-muted ${project.color} group-hover:scale-110 transition-bounce`}>
-                    <project.icon className="w-5 h-5" />
-                  </div>
-                  <Badge variant="secondary" className="text-xs">
-                    {project.period || project.year}
-                  </Badge>
-                </div>
-                <CardTitle className="text-lg leading-tight">{project.title}</CardTitle>
-                <CardDescription className="text-sm text-primary font-medium">
-                  {project.type}
-                </CardDescription>
-              </CardHeader>
-              
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="outline" className="text-xs px-2 py-1">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div key={index} variants={cardVariants}>
+              <motion.div
+                whileHover={{ scale: 1.03, y: -8 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Card className="shadow-card border-card-border hover:shadow-glow transition-smooth group overflow-hidden h-full cursor-pointer">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-start justify-between mb-3">
+                      <motion.div 
+                        className={`inline-flex p-2 rounded-lg bg-muted ${project.color}`}
+                        whileHover={{ rotate: 10 }}
+                      >
+                        <project.icon className="w-5 h-5" />
+                      </motion.div>
+                      <Badge variant="secondary" className="text-xs">
+                        {project.period || project.year}
+                      </Badge>
+                    </div>
+                    <CardTitle className="text-lg leading-tight">{project.title}</CardTitle>
+                    <CardDescription className="text-sm text-primary font-medium">
+                      {project.type}
+                    </CardDescription>
+                  </CardHeader>
+                  
+                  <CardContent className="space-y-4">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {project.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="outline" className="text-xs px-2 py-1">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
