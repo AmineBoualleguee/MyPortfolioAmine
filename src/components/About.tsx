@@ -36,7 +36,7 @@ const About = () => {
             
             <p className="text-lg text-muted-foreground leading-relaxed">
               Actuellement à la recherche d'un <strong className="text-accent">stage de fin d'études (PFE)</strong> 
-              pour mettre en œuvre mes connaissances dans un environnement innovant.
+              dans un environnement innovant.
             </p>
           </div>
           
