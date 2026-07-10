@@ -9,7 +9,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Localisation",
-      value: "Sidi Aich, Gafsa – Tunisie",
+      value: "Sousse, Tunisie",
       action: "Voir sur la carte",
       color: "text-primary"
     },
@@ -161,7 +161,7 @@ const Contact = () => {
                 className="px-6 py-3 hover:bg-primary/10 hover:border-primary transition-smooth"
                 asChild
               >
-                <a href="https://github.com/amine-bouallegue" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/AmineBoualleguee" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5 mr-2 text-primary" />
                   GitHub
                 </a>
