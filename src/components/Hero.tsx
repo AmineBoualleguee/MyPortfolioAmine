@@ -142,7 +142,7 @@ const Hero = () => {
                 className="w-12 h-12 rounded-full hover:bg-primary/10 transition-smooth"
                 asChild
               >
-                <a href="https://github.com/amine-bouallegue" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/AmineBoualleguee" target="_blank" rel="noopener noreferrer">
                   <Github className="w-6 h-6 text-primary" />
                 </a>
               </Button>
