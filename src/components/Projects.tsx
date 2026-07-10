@@ -9,9 +9,9 @@ const Projects = () => {
     {
       icon: BarChart3,
       title: "Plateforme de Facturation Électronique Intelligente",
-      type: "Projet de Fin d'Études",
+      type: "Plateforme Full-Stack & IA",
       year: "2026",
-      period: "PFE 2026",
+      period: "2026",
       description: "Conception et développement d'une plateforme intelligente de facturation électronique permettant l'importation des factures, l'extraction automatique des données, la correction des champs, la validation des lignes et la génération de documents structurés. Intégration d'un module IA avec Flask, backend Spring Boot, déploiement Docker, pipeline CI/CD et supervision Uptime Kuma.",
       technologies: ["Angular", "Spring Boot", "Flask", "IA", "Docker", "CI/CD", "Uptime Kuma"],
       color: "text-primary"
