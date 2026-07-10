@@ -7,14 +7,44 @@ import { motion } from "framer-motion";
 const Projects = () => {
   const projects = [
     {
+      icon: BarChart3,
+      title: "Plateforme de Facturation Électronique Intelligente",
+      type: "Projet de Fin d'Études",
+      year: "2026",
+      period: "PFE 2026",
+      description: "Conception et développement d'une plateforme intelligente de facturation électronique permettant l'importation des factures, l'extraction automatique des données, la correction des champs, la validation des lignes et la génération de documents structurés. Intégration d'un module IA avec Flask, backend Spring Boot, déploiement Docker, pipeline CI/CD et supervision Uptime Kuma.",
+      technologies: ["Angular", "Spring Boot", "Flask", "IA", "Docker", "CI/CD", "Uptime Kuma"],
+      color: "text-primary"
+    },
+    {
+      icon: Users,
+      title: "Système de Gestion des Ressources Humaines",
+      type: "Application Full-Stack & DevOps",
+      year: "2026",
+      period: "Mai – Juil 2026",
+      description: "Développement d'une application web de gestion des employés, départements, congés et évaluations avec authentification sécurisée, APIs REST, gestion des rôles utilisateurs, tests automatisés, observabilité complète et pipeline CI/CD.",
+      technologies: ["Angular", "ASP.NET Core", "C#", "Entity Framework Core", "PostgreSQL", "JWT", "RBAC", "Docker", "GitHub Actions", "xUnit", "Testcontainers", "Vitest", "Trivy", "OpenTelemetry", "Prometheus", "Grafana"],
+      color: "text-accent"
+    },
+    {
       icon: Activity,
       title: "Application HealthVision",
       type: "Projet d'IA Médicale Avancée",
       year: "2025",
       period: "Août - Oct 2025",
-      description: "Conception et développement d'une application web intelligente utilisant l'IA pour assister les professionnels de santé dans la détection automatique de fractures sur des images radiographiques. Mise en place d'un pipeline complet d'inférence incluant prétraitement d'images, détection YOLOv8, visualisation explicable via Grad-CAM.",
-      technologies: ["React", "Node.js", "Express.js", "PostgreSQL", "Deep Learning", "YOLOv8", "OpenCV", "Grad-CAM", "Python", "FastAPI", "Docker"],
-      color: "text-primary"
+      description: "Conception d'une application web intelligente pour la détection automatique de fractures sur images radiographiques, avec pipeline d'inférence, prétraitement, YOLOv8, Grad-CAM et interface React interactive.",
+      technologies: ["React", "Node.js", "Express.js", "PostgreSQL", "YOLOv8", "OpenCV", "Grad-CAM", "Python", "FastAPI", "Docker"],
+      color: "text-secondary"
+    },
+    {
+      icon: Users,
+      title: "Site de Recrutement en Ligne",
+      type: "Plateforme Web Full-Stack",
+      year: "2025",
+      period: "2025",
+      description: "Conception et développement d'une plateforme web de recrutement permettant la publication d'offres d'emploi, la gestion des candidatures, l'analyse des CV et le suivi des profils candidats. Architecture full-stack avec interface React moderne, backend Node.js et base de données MongoDB.",
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "REST API", "GitHub"],
+      color: "text-primary-glow"
     },
     {
       icon: Bot,
@@ -22,19 +52,19 @@ const Projects = () => {
       type: "Projet IA",
       year: "2025",
       period: "Avr - Juil 2025",
-      description: "Développement d'une application d'IA capable de résumer automatiquement des vidéos et textes, générer des sous-titres et assurer la traduction multilingue. Intégration de modèles NLP avancés et d'un module d'évaluation linguistique pour tester le niveau des utilisateurs.",
+      description: "Développement d'une application IA de résumé automatique de vidéos et textes, génération de sous-titres, traduction multilingue et évaluation linguistique des utilisateurs.",
       technologies: ["Python", "Transformers", "TensorFlow", "PyTorch", "Hugging Face", "Ollama"],
-      color: "text-secondary"
+      color: "text-accent"
     },
     {
       icon: Users,
       title: "Plateforme Medicollab",
-      type: "Solution Web Sécurisée de Collaboration Médicale",
+      type: "Collaboration Médicale Sécurisée",
       year: "2025",
       period: "Fév - Avr 2025",
-      description: "Développement d'une plateforme web facilitant la collaboration entre médecins et la gestion sécurisée des dossiers médicaux électroniques. Participation à la conception backend, APIs REST, modèles de données et intégration PostgreSQL avec un fort accent sur la protection des données.",
+      description: "Développement d'une plateforme web pour la collaboration entre médecins et la gestion sécurisée des dossiers médicaux électroniques, avec APIs REST et intégration PostgreSQL.",
       technologies: ["Angular", "Node.js", "Express.js", "PostgreSQL"],
-      color: "text-accent"
+      color: "text-secondary"
     },
     {
       icon: Zap,
@@ -42,9 +72,9 @@ const Projects = () => {
       type: "Plateforme IA d'Économie Circulaire",
       year: "2024",
       period: "2024",
-      description: "Développement d'une plateforme intelligente dédiée à la réduction des déchets et à la promotion de l'économie circulaire via un marketplace multi-acteurs (C2C, B2B, B2C). Conception et implémentation d'une architecture full-stack moderne intégrant des fonctionnalités avancées d'intelligence artificielle.",
-      technologies: ["React", "Node.js", "Express.js", "PostgreSQL", "Python", "TensorFlow"],
-      color: "text-primary-glow"
+      description: "Développement d'une plateforme intelligente dédiée à l'économie circulaire via un marketplace multi-acteurs, intégrant des fonctionnalités avancées d'intelligence artificielle.",
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Python", "TensorFlow"],
+      color: "text-primary"
     },
     {
       icon: BarChart3,
@@ -52,7 +82,7 @@ const Projects = () => {
       type: "Projet de Fin d'Études – Licence",
       year: "2023",
       period: "Jan - Mai 2023",
-      description: "Développement d'une application web pour la gestion de la facturation, des devis, des congés, de la structure interne, des clients et des notes de frais. Conception UML, modèles de données, modules CRUD et automatisation des processus internes avec une interface utilisateur ergonomique.",
+      description: "Développement d'une application web pour la gestion de la facturation, des devis, des congés, de la structure interne, des clients et des notes de frais. Conception UML, modèles de données, modules CRUD et automatisation des processus internes.",
       technologies: ["Angular", "Spring Boot", "MySQL"],
       color: "text-accent"
     }

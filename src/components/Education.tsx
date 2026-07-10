@@ -9,7 +9,7 @@ const Education = () => {
       degree: "Diplôme National d'Ingénieur en Informatique",
       institution: "Institut Supérieur d'Informatique et des Technologies de Communication de Sousse",
       location: "Sousse",
-      period: "2023 – Présent",
+      period: "2023 – 2026",
       status: "En cours",
       color: "text-primary"
     },

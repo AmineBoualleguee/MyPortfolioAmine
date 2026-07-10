@@ -52,19 +52,22 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Étudiant en dernière année d'ingénierie informatique à l'<strong className="text-foreground">ISITCOM Sousse</strong>, 
-              passionné par le développement logiciel, l'intelligence artificielle et le cloud computing.
+              Ingénieur en informatique spécialisé en <strong className="text-foreground">développement full-stack, 
+              Cloud et DevOps</strong>, avec une expérience dans la conception d'applications web, d'APIs REST, 
+              de bases de données et d'architectures modernes.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Solides compétences en <strong className="text-primary">Java</strong>, 
-              <strong className="text-primary"> Angular</strong> et <strong className="text-primary">Spring Boot</strong>, 
-              avec une expérience pratique sur des projets IA et full-stack.
+              Solides compétences en <strong className="text-primary">Angular</strong>, 
+              <strong className="text-primary"> React</strong>, <strong className="text-primary">Spring Boot</strong> et 
+              <strong className="text-primary"> ASP.NET Core</strong>, avec une expérience pratique sur des projets 
+              IA, cloud et full-stack.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Actuellement à la recherche d'un <strong className="text-accent">stage de fin d'études (PFE)</strong> 
-              dans un environnement innovant.
+              Expérience dans la réalisation de solutions web, cloud et IA orientées vers la 
+              <strong className="text-accent"> performance, l'automatisation, la sécurité, l'observabilité 
+              et la fiabilité</strong>.
             </p>
           </motion.div>
           
