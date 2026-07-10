@@ -20,17 +20,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Status Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm font-medium">
-              🎯 Recherche un stage PFE
-            </Badge>
-          </motion.div>
-          
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
