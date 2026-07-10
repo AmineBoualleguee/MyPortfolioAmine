@@ -9,7 +9,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Localisation",
-      value: "Sidi Aich, Gafsa – Tunisie",
+      value: "Sousse, Tunisie",
       action: "Voir sur la carte",
       color: "text-primary"
     },

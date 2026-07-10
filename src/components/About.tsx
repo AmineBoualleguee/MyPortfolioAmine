@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 const About = () => {
   const interests = [
-    { icon: Code, label: "Développement Logiciel", color: "text-primary" },
+    { icon: Code, label: "Développement Full-Stack", color: "text-primary" },
     { icon: Brain, label: "Intelligence Artificielle", color: "text-accent" },
-    { icon: Shield, label: "Cybersécurité", color: "text-secondary" },
-    { icon: Cloud, label: "Cloud Computing", color: "text-primary-glow" },
+    { icon: Cloud, label: "Cloud Computing", color: "text-secondary" },
+    { icon: Shield, label: "DevOps & Automatisation", color: "text-primary-glow" },
   ];
 
   const containerVariants = {
