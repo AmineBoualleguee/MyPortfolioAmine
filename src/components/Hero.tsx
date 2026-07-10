@@ -46,7 +46,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-lg md:text-xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Étudiant en dernière année d'ingénierie informatique, passionné par le développement logiciel, 
+            Ingénieur en informatique passionné par le développement logiciel, 
             l'intelligence artificielle et le cloud computing
           </motion.p>
           

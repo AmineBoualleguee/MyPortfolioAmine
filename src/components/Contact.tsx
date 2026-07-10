@@ -60,7 +60,7 @@ const Contact = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Restons en Contact</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Intéressé par mon profil ? N'hésitez pas à me contacter pour discuter d'opportunités 
-            de stage ou de collaboration
+            de collaboration
           </p>
         </motion.div>
         
@@ -72,9 +72,6 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <Badge variant="default" className="mb-4 px-4 py-2 text-sm">
-            🎯 Disponible pour un stage PFE
-          </Badge>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button size="lg" className="px-8 py-3 text-lg shadow-button">
