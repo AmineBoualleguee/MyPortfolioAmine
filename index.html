@@ -136,17 +136,47 @@ section{scroll-margin-top:92px}
 }
 .nav-links a::after{
   content:"";position:absolute;left:13px;right:13px;bottom:2px;height:1px;background:var(--clay);
-  transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.22,.8,.3,1);
+  transform:scaleX(0);transform-origin:left;transition:transform .18s ease-out;
 }
-.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
-.nav-links a:hover,.nav-links a.active{color:var(--ink)}
-.seg{display:flex;gap:2px;flex:none}
-.seg button{
-  font-size:13px;color:var(--ink-3);padding:6px 11px;border-radius:999px;
-  transition:color .2s,background .2s;
+/* keyboard focus gets the same indicator as the mouse */
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after,
+.nav-links a.active::after{transform:scaleX(1)}
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a.active{color:var(--ink)}
+.nav-links a.active::after{height:1.5px}
+
+/* icon button (theme) */
+.icon-btn{
+  flex:none;width:38px;height:38px;border-radius:999px;display:grid;place-items:center;
+  color:var(--ink-2);transition:color .2s ease,background .2s ease;
 }
-.seg button[aria-pressed="true"]{background:var(--ink);color:var(--on-ink)}
-.progress{height:1.5px;background:var(--clay);width:0;transition:width .12s linear}
+.icon-btn:hover{color:var(--ink);background:var(--wash)}
+.th-ico{width:19px;height:19px;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round}
+.th-ico .sun,.th-ico .moon{
+  transform-box:fill-box;transform-origin:center;
+  transition:transform .28s cubic-bezier(.22,.8,.3,1),opacity .22s ease;
+}
+.th-ico .moon{opacity:0;transform:rotate(-80deg) scale(.4)}
+.icon-btn.is-dark .th-ico .sun{opacity:0;transform:rotate(80deg) scale(.4)}
+.icon-btn.is-dark .th-ico .moon{opacity:1;transform:none}
+
+.progress{height:2px;background:var(--clay);width:0;transition:width .12s linear}
+
+/* back to top */
+.to-top{
+  position:fixed;right:clamp(16px,3vw,28px);
+  bottom:calc(clamp(16px,3vw,28px) + env(safe-area-inset-bottom,0px));
+  z-index:95;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:var(--paper);border:1px solid var(--hair);color:var(--ink-2);
+  box-shadow:var(--sheet-shadow);
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .22s ease,transform .22s ease-out,visibility .22s,color .2s,border-color .2s;
+}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{color:var(--clay);border-color:var(--clay)}
+.to-top svg{width:18px;height:18px}
 
 /* ================= hero ================= */
 .hero{padding-top:clamp(96px,12vw,140px);padding-bottom:clamp(48px,7vw,86px)}
@@ -415,6 +445,7 @@ html.rv .head[data-rv]:not(.in){opacity:0;transform:none}
 <a class="skip" href="#projects">Skip to projects</a>
 
 <header class="nav" id="nav">
+  <div class="progress" id="progress"></div>
   <div class="wrap nav-in">
     <a class="brand" href="#top">Amine Bouallegue</a>
     <nav class="nav-links" aria-label="Sections">
@@ -424,13 +455,23 @@ html.rv .head[data-rv]:not(.in){opacity:0;transform:none}
       <a href="#journey">Journey</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="seg" role="group" aria-label="Colour theme">
-      <button type="button" id="thLight" aria-pressed="false">Light</button>
-      <button type="button" id="thDark" aria-pressed="false">Dark</button>
-    </div>
+    <button class="icon-btn" type="button" id="themeBtn" aria-label="Switch to dark mode">
+      <svg class="th-ico" viewBox="0 0 24 24" aria-hidden="true">
+        <g class="sun">
+          <circle cx="12" cy="12" r="4.3"/>
+          <path d="M12 2.7v2.3M12 19v2.3M2.7 12H5M19 12h2.3M5.4 5.4 7 7M17 17l1.6 1.6M18.6 5.4 17 7M7 17l-1.6 1.6"/>
+        </g>
+        <path class="moon" d="M20.8 13.4A8.4 8.4 0 1 1 10.9 3.5a6.6 6.6 0 0 0 9.9 9.9z"/>
+      </svg>
+    </button>
   </div>
-  <div class="progress" id="progress"></div>
 </header>
+
+<button class="to-top" type="button" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
 
 <main id="top">
 
@@ -1288,26 +1329,26 @@ document.getElementById('cvBtn').addEventListener('click',function(e){
 /* ---------------- theme ---------------- */
 (function(){
   var root=document.documentElement;
-  var lb=document.getElementById('thLight'),db=document.getElementById('thDark');
+  var btn=document.getElementById('themeBtn');
   function resolved(){
     var t=root.getAttribute('data-theme');
     if(t)return t;
     return window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
   }
   function sync(){
-    var r=resolved();
-    lb.setAttribute('aria-pressed',r==='light'?'true':'false');
-    db.setAttribute('aria-pressed',r==='dark'?'true':'false');
+    var dark=resolved()==='dark';
+    btn.classList.toggle('is-dark',dark);
+    /* the label names the destination, not the current state */
+    btn.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');
     window.dispatchEvent(new Event('ab:theme'));
   }
   try{var saved=localStorage.getItem('ab-theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
-  function set(t){
-    root.setAttribute('data-theme',t);
-    try{localStorage.setItem('ab-theme',t);}catch(e){}
+  btn.addEventListener('click',function(){
+    var next=resolved()==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('ab-theme',next);}catch(e){}
     sync();
-  }
-  lb.addEventListener('click',function(){set('light');});
-  db.addEventListener('click',function(){set('dark');});
+  });
   try{window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',sync);}catch(e){}
   sync();
 })();
@@ -1326,8 +1367,14 @@ document.getElementById('cvBtn').addEventListener('click',function(e){
     var cur=-1;
     for(var i=0;i<secs.length;i++){if(secs[i]&&secs[i].getBoundingClientRect().top<=130)cur=i;}
     links.forEach(function(a,i){a.classList.toggle('active',i===cur);});
+    if(topBtn)topBtn.classList.toggle('show',y>window.innerHeight*0.85);
     ticking=false;
   }
+  var topBtn=document.getElementById('toTop');
+  if(topBtn)topBtn.addEventListener('click',function(){
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+  });
   window.addEventListener('scroll',function(){if(!ticking){ticking=true;window.requestAnimationFrame(upd);}},{passive:true});
   upd();
 })();
