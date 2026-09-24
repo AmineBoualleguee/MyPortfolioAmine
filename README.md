@@ -19,7 +19,7 @@ Amine_Bouallegue_CV.pdf    CV, linked from the résumé panel
 
 - **Hero** — intro, contact channels, résumé panel
 - **Focus** — four specializations (DevOps & Cloud, AI & LLM, Data Engineering, Full-Stack), each filters the project log
-- **Projects** — 15 projects, filterable by specialization, each opening a full breakdown
+- **Projects** — 16 projects, filterable by specialization, each opening a full breakdown
 - **Skills** — 11 groups covering the whole stack
 - **Journey** — experience, education and certifications
 - **Contact** — direct channels plus a form that composes a message in the visitor's own mail client
