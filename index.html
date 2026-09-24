@@ -360,7 +360,7 @@ html.rv [data-rv]:not(.in){opacity:0;transform:translateY(26px) scale(.986)}
 /* soft vignette: sits over the content, under the modal, blocks nothing */
 body::after{
   content:"";position:fixed;inset:0;z-index:2;pointer-events:none;
-  background:radial-gradient(128% 96% at 50% 40%,transparent 56%,color-mix(in srgb,var(--ink) 10%,transparent) 100%);
+  background:radial-gradient(135% 105% at 50% 40%,transparent 70%,color-mix(in srgb,var(--ink) 6%,transparent) 100%);
 }
 /* section titles rise word by word out of a mask */
 .head h2 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
@@ -1413,9 +1413,10 @@ document.getElementById('cvBtn').addEventListener('click',function(e){
   });
 
   /* hero layers drift at their own rates, and the whole hero recedes as you leave it */
+  /* Depth comes from the layers moving at different rates — never from fading
+     them. Dimming live text while it is still on screen just reads as fog. */
   var portrait=document.querySelector('.hero .portrait');
   var col=document.querySelector('.hero .hero-grid > div');
-  var hero=document.querySelector('.hero');
   if(portrait)portrait.classList.add('px');
   if(col)col.classList.add('px');
 
@@ -1427,10 +1428,6 @@ document.getElementById('cvBtn').addEventListener('click',function(e){
     if(y>vh*1.25)return;                       /* stop working once it's gone */
     if(portrait)portrait.style.transform='translate3d(0,'+(y*0.085)+'px,0)';
     if(col)col.style.transform='translate3d(0,'+(y*0.035)+'px,0)';
-    if(hero){
-      var f=1-Math.min(1,y/(vh*0.95));
-      hero.style.opacity=(0.25+0.75*f).toFixed(3);
-    }
   }
   window.addEventListener('scroll',function(){
     if(!ticking){ticking=true;requestAnimationFrame(park);}
