@@ -1,0 +1,58 @@
+/* Small, one-shot transitions retain the portfolio's original visual identity. */
+.row{animation:none;transition:transform 240ms cubic-bezier(.22,.8,.3,1),border-color 240ms,background-color 240ms;isolation:isolate}
+.row:hover{opacity:1}
+.row .cover{position:relative;transition:transform 280ms cubic-bezier(.22,.8,.3,1),box-shadow 280ms,border-color 280ms}
+.row .cover img{transition:transform 320ms cubic-bezier(.22,.8,.3,1)}
+.row .open svg{transition:transform 220ms cubic-bezier(.22,.8,.3,1)}
+.row .tech{transition:background-color 220ms,color 220ms}
+.row:focus-visible{outline-offset:7px;border-radius:8px}
+.row:focus-visible .cover{transform:translateY(-3px);border-color:var(--c);box-shadow:0 10px 24px -14px var(--ink-3)}
+.row:focus-visible .cover img{transform:scale(1.035)}
+.row:focus-visible .open svg{transform:translateX(5px)}
+@media(hover:hover) and (pointer:fine){
+  .row:hover{transform:translateY(-2px);border-top-color:var(--hair)}
+  .row:hover .cover{transform:translateY(-3px);border-color:var(--c);box-shadow:0 10px 24px -14px var(--ink-3)}
+  .row:hover .cover img{transform:scale(1.035)}
+  .row:hover .tech{background:color-mix(in srgb,var(--c) 10%,var(--paper))}
+  .row:hover .open svg{transform:translateX(5px)}
+}
+.row.project-enter .cover,.row.project-enter .row-body{animation:projectReveal 340ms cubic-bezier(.22,.8,.3,1) both;animation-delay:var(--entry-delay,0ms)}
+.row.project-enter .row-body{animation-delay:calc(var(--entry-delay,0ms) + 45ms)}
+.sheet-inner .body>p{animation:projectDetail 300ms ease-out both}
+.sheet-inner .body>p:nth-child(2){animation-delay:45ms}
+.sheet-inner .body>p:nth-child(3){animation-delay:90ms}
+@keyframes projectReveal{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+@keyframes projectDetail{from{opacity:0;translate:0 7px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){.row,.row *,.row::before,.row::after,.sheet-inner .body>p{animation:none!important;transition:none!important;transform:none!important;translate:none!important}}
+
+/* Shared timing for the existing section, navigation and control treatments. */
+:root{--motion-fast:180ms;--motion-normal:280ms;--motion-reveal:340ms;--motion-ease:cubic-bezier(.22,.8,.3,1)}
+.rise{animation-duration:420ms;animation-timing-function:var(--motion-ease)}
+.d1{animation-delay:30ms}.d2{animation-delay:60ms}.d3{animation-delay:90ms}.d4{animation-delay:120ms}.d5{animation-delay:150ms}
+[data-rv]{transition:opacity var(--motion-reveal) var(--motion-ease),transform var(--motion-reveal) var(--motion-ease)}
+html.rv [data-rv]:not(.in){transform:translateY(10px)}
+html.rv .head[data-rv]:not(.in){transform:translateY(8px)}
+html.rv .head h2 .w i{transform:none;transition:none}
+html.rv [data-rv]:focus-within{opacity:1;transform:none}
+.btn,.chip,.icon-btn,.focus-item{transition:transform var(--motion-fast) var(--motion-ease),background-color var(--motion-fast),border-color var(--motion-fast),color var(--motion-fast)}
+.focus-item:hover{opacity:1}
+.skill-cell,.certs{transition:border-color var(--motion-fast),box-shadow var(--motion-normal)}
+.reach a{transition:color var(--motion-fast),transform var(--motion-fast);padding-left:0}
+.reach a:hover{padding-left:0}
+.btn:focus-visible,.chip:focus-visible,.focus-item:focus-visible{transform:translateY(-2px)}
+.btn:active,.chip:active{transform:translateY(0)}
+.overlay{transition:opacity 200ms ease-out}
+@media(hover:hover) and (pointer:fine){
+  .btn:hover,.chip:hover,.focus-item:hover{transform:translateY(-2px)}
+  .skill-cell:hover,.certs:hover{border-color:var(--hair);box-shadow:0 5px 18px -14px var(--ink-3)}
+  .reach a:hover{transform:translateX(3px)}
+}
+@media(hover:none),(pointer:coarse){
+  .row:hover,.row:hover .cover,.row:hover .cover img,.row:hover .open svg,.btn:hover,.chip:hover,.focus-item:hover,.reach a:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  html.rv [data-rv],html.rv [data-rv]:not(.in),html.rv .head h2 .w i,.rise{opacity:1!important;transform:none!important;translate:none!important}
+  .px,.btn,.chip,.focus-item,.reach a{transform:none!important}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}

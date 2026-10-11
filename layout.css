@@ -1,0 +1,36 @@
+/* Wider page layout with a viewport-height hero and the supplied cutout portrait. */
+:root{--wrap:100%;--gut:clamp(20px,4vw,88px)}
+.wrap{max-width:none}
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding-top:110px;padding-bottom:44px}
+.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,100px);width:100%}
+.hero-grid>div{min-width:0}
+.hero h1{font-size:clamp(64px,7.7vw,138px)}
+.hero-bio{max-width:54ch;font-size:clamp(16px,1.25vw,20px)}
+.hero .shot{width:100%;max-width:none;align-self:stretch;align-items:center;justify-content:center}
+.hero .portrait{width:100%;max-width:660px;border-radius:0;overflow:visible;-webkit-mask-image:none;mask-image:none}
+.hero .portrait img{width:100%;height:clamp(460px,76svh,980px);aspect-ratio:1086/1448;object-fit:contain;object-position:center bottom}
+.hero .px{transform:none!important;will-change:auto}
+.row{grid-template-columns:clamp(230px,25vw,420px) minmax(0,1fr);gap:clamp(28px,4vw,72px)}
+.row-body{justify-content:center}
+.row-body p{max-width:68ch}
+.cover img{object-fit:contain}
+.head{max-width:72ch}
+.socials a{overflow-wrap:anywhere;min-width:0}
+@media(min-width:1600px){.hero h1{font-size:clamp(120px,7.7vw,160px)}.hero .portrait{max-width:760px}}
+@media(max-width:1100px) and (min-width:881px){.nav-in{gap:12px}.nav-links a{padding-inline:8px;font-size:14px}.hero h1{font-size:clamp(56px,7.4vw,82px)}}
+@media(max-width:880px){
+  .hero{min-height:100svh;padding-top:148px;padding-bottom:48px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:32px}
+  .hero .shot{order:0;margin-inline:auto;max-width:480px}
+  .hero .portrait{max-width:420px}
+  .hero .portrait img{height:auto;max-height:560px;object-fit:contain}
+  .hero h1{font-size:clamp(48px,10vw,84px)}
+}
+@media(max-width:640px){
+  .row{grid-template-columns:minmax(0,1fr);gap:18px}
+  .hero .shot{max-width:360px}
+  .hero .portrait{max-width:320px}
+  .hero .portrait img{max-height:430px}
+  .hero-bio{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){.hero .portrait{transform:none!important}}
