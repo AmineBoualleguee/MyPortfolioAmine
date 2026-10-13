@@ -206,12 +206,32 @@
   });
   function observe() { observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['aria-label','placeholder','alt','title']}); }
   var picker = document.getElementById('languagePicker');
+  var languageGroup = document.createElement('div');
+  languageGroup.className = 'language-switcher';
+  languageGroup.setAttribute('role','group');
+  languageGroup.setAttribute('aria-label','Language');
+  var languageButtons = ['en','fr'].map(function (code) {
+    var button = document.createElement('button');
+    button.type = 'button'; button.className = 'lang-button';
+    button.lang = code; button.textContent = code.toUpperCase();
+    button.setAttribute('aria-label',code === 'en' ? 'English' : 'Fran\u00e7ais');
+    button.addEventListener('click',function () { setLanguage(code); });
+    languageGroup.appendChild(button);
+    return button;
+  });
+  picker.closest('.language-picker').hidden = true;
+  picker.closest('.language-picker').after(languageGroup);
   var headings = Array.from(document.querySelectorAll('.head h2')).map(function (element) {
     return {element:element,source:element.textContent,animated:!!element.querySelector('.w')};
   });
   function setLanguage(value) {
     observer.disconnect(); language = value === 'fr' ? 'fr' : 'en';
     document.documentElement.lang = language; picker.value = language;
+    languageButtons.forEach(function (button) {
+      var selected = button.lang === language;
+      button.classList.toggle('is-active',selected);
+      button.setAttribute('aria-pressed',String(selected));
+    });
     headings.forEach(function (heading) {
       var text = translate(heading.source);
       if (!heading.animated) { heading.element.textContent = text; return; }

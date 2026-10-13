@@ -1,4 +1,8 @@
 /* Wider page layout with a viewport-height hero and the supplied cutout portrait. */
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--ground:#000;--paper:#111;--on-ink:#000;--scrim:rgba(0,0,0,.72)}
+}
+:root[data-theme="dark"]{--ground:#000;--paper:#111;--on-ink:#000;--scrim:rgba(0,0,0,.72)}
 :root{--wrap:100%;--gut:clamp(20px,4vw,88px)}
 .wrap{max-width:none}
 .hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding-top:110px;padding-bottom:44px}
