@@ -72,7 +72,7 @@
     ['Plateforme de facturation électronique automatisant le cycle complet, avec extraction LLM/OCR et agents IA signalant les anomalies avant validation humaine.',[
       'Plateforme d’entreprise automatisant le cycle complet de facturation électronique : ingestion, extraction par IA, validation, approbation et archivage.',
       'Développement du module d’extraction LLM/OCR en Python et FastAPI, avec des agents IA qui signalent les anomalies avant la revue humaine, et conception d’une API REST sécurisée par JWT et contrôle d’accès par rôles.',
-      'Le tableau de bord Angular propose des filtres dynamiques et des indicateurs sur les factures à approuver. La plateforme est conteneurisée avec Docker Compose, automatisée par GitHub Actions et supervisée en continu, avec une sortie XML conforme aux exigences.'
+      'Le tableau de bord Vue.js propose des filtres dynamiques et des indicateurs sur les factures à approuver. La plateforme est conteneurisée avec Docker Compose, automatisée par GitHub Actions et supervisée en continu, avec une sortie XML conforme aux exigences.'
     ]],
     ['Architecture de sept microservices, messagerie événementielle, déploiement Kubernetes avec Helm et observabilité complète.',[
       'Architecture distribuée couvrant l’authentification, les utilisateurs, le catalogue, les commandes, les stocks, les notifications et une passerelle API. Les services échangent des événements RabbitMQ et disposent chacun de leur base de données.',
@@ -115,9 +115,9 @@
       'Solution complète d’observabilité pour les applications distribuées et les infrastructures conteneurisées.',
       'Collecte des métriques, traces distribuées et agrégation des journaux pour identifier les problèmes de performance et améliorer la disponibilité, avec tableaux de bord personnalisés et alertes.'
     ]],
-    ['Gestion collaborative des projets et tâches avec synchronisation SignalR, gestion des rôles et tableaux de bord de productivité.',[
-      'Plateforme collaborative de gestion des projets, tâches et workflows avec synchronisation en temps réel via SignalR.',
-      'Gestion des rôles et permissions, notifications instantanées, suivi des tâches et tableaux de bord, sur une API REST ASP.NET Core sécurisée et une interface Angular.'
+    ['Gestion collaborative des projets et tâches avec synchronisation WebSockets, gestion des rôles et tableaux de bord de productivité.',[
+      'Plateforme collaborative de gestion des projets, tâches et workflows avec synchronisation en temps réel via WebSockets.',
+      'Gestion des rôles et permissions, notifications instantanées, suivi des tâches et tableaux de bord, sur une API REST PHP sécurisée et une interface Vue.js.'
     ]],
     ['Gestion des dossiers médicaux avec architecture REST, contrôle d’accès par rôles et authentification Spring Security/JWT.',[
       'Plateforme sécurisée de gestion des dossiers médicaux électroniques.',
@@ -125,11 +125,11 @@
     ]],
     ['Application RH couvrant les employés, services, contrats, congés, recrutements et évaluations.',[
       'Application RH complète pour la gestion des employés, services, contrats, congés, recrutements et évaluations de performance.',
-      'Authentification par rôles avec ASP.NET Identity et JWT, et tableaux de bord RH sur l’ensemble des données.'
+      'API REST PHP et interface Vue.js, avec authentification par rôles et JWT, et tableaux de bord RH sur l’ensemble des données.'
     ]],
-    ['ERP multi-module : utilisateurs, clients, fournisseurs, produits, stocks, achats, ventes et rapports, avec SignalR et Redis.',[
+    ['ERP multi-module : utilisateurs, clients, fournisseurs, produits, stocks, achats, ventes et rapports, avec WebSockets et Redis.',[
       'Plateforme ERP couvrant les utilisateurs, clients, fournisseurs, produits, stocks, achats, ventes et rapports.',
-      'Opérations CRUD complexes entre les modules, notifications en temps réel avec SignalR et cache Redis pour les données fréquemment consultées.'
+      'API REST PHP et interface Vue.js : opérations CRUD complexes entre les modules, notifications en temps réel avec WebSockets et cache Redis pour les données fréquemment consultées.'
     ]],
     ['Analyse de jeux de données en langage naturel : un LLM génère des statistiques, visualisations et rapports.',[
       'Plateforme conversationnelle permettant aux utilisateurs métier d’interroger leurs jeux de données en langage naturel via un LLM.',
