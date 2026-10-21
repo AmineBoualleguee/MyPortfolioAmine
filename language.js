@@ -16,29 +16,29 @@
     'HealthVision AI illustrative interface showing a chest X-ray and demo analysis details.':'Interface illustrative HealthVision AI avec une radiographie thoracique et une analyse de d\u00e9monstration.',
     'Language':'Langue', 'Focus':'Expertises', 'Projects':'Projets', 'Skills':'Compétences', 'Journey':'Parcours',
     'Skip to projects':'Aller aux projets', 'Explore projects':'Explorer les projets', 'Download CV':'Télécharger le CV',
-    "Full Stack PHP / Vue.js Developer":"Développeur Full Stack PHP / Vue.js", 'AI Engineer · LLM · Agents':'Ingénieur IA · LLM · Agents',
+    'Software Engineer':'Ingénieur logiciel', 'AI Engineer · LLM · Agents':'Ingénieur IA · LLM · Agents',
     'building scalable & intelligent systems':'des systèmes évolutifs et intelligents',
-    "I build web applications end to end with":"Je développe des applications web de bout en bout avec",
-    "secured REST APIs":"des API REST sécurisées", 'CI/CD and observability':'CI/CD et observabilité',
-    'interactive interfaces':'des interfaces interactives', ', and':', et',
-    "for production. Full Stack Developer based in Sousse, Tunisia, with three years of delivery behind me.":"pour la production. Développeur Full Stack basé à Sousse, en Tunisie, avec trois ans d’expérience dans la réalisation de projets.",
+    'I build platforms end to end —':'Je développe des plateformes de bout en bout —',
+    'containerised microservices':'microservices conteneurisés', 'CI/CD and observability':'CI/CD et observabilité',
+    'LLM-powered document pipelines':'pipelines documentaires intégrant des LLM', ', and production':', et des applications',
+    'applications. Software Engineer based in Sousse, Tunisia, with three years of delivery behind me.':'en production. Ingénieur logiciel basé à Sousse, en Tunisie, avec trois ans d’expérience dans la réalisation de projets.',
     '3 yrs':'3 ans', 'Shipping software':'Développement logiciel', 'Projects delivered':'Projets réalisés', 'Azure certified':'Certifié Azure',
     'Tunisia':'Tunisie', 'Four layers, one engineer.':'Quatre expertises, un ingénieur.',
-    "My focus is full stack web development with PHP and Vue.js, supported by experience in DevOps, AI and data engineering. Pick a layer to filter the project log.":"Je me spécialise dans le développement web Full Stack PHP / Vue.js, avec une expérience complémentaire en DevOps, IA et ingénierie des données. Choisissez un domaine pour filtrer les projets.",
+    'Most of my work sits where these overlap — infrastructure carrying an AI workload, or a data pipeline feeding a product surface. Pick a layer to filter the project log.':'Mes projets se situent au croisement de ces domaines : infrastructure pour l’IA, pipelines de données au service des applications. Choisissez un domaine pour filtrer les projets.',
     'Things I’ve built.':'Mes réalisations.',
     'projects from internships, client work and my own lab. Open any row for the full breakdown.':'projets réalisés en stage, pour des clients et à titre personnel. Ouvrez un projet pour découvrir les détails.',
     'The stack I reach for.':'Mes outils au quotidien.',
-    "PHP and Vue.js for full stack web development, alongside the tools I use for APIs, databases and production delivery.":"PHP et Vue.js pour le développement web Full Stack, accompagnés des outils que j’utilise pour les API, les bases de données et la mise en production.",
+    'Grouped the way I actually use them — from the pipeline that builds the artefact to the dashboard that watches it in production.':'Regroupés selon leur usage, du pipeline de construction au tableau de bord qui surveille les applications en production.',
     'How I got here.':'Mon parcours.', 'Full-Stack Java / Angular Developer':'Développeur Full-Stack Java / Angular',
     'Designed, developed and maintained enterprise web applications on Spring Boot and Angular. Built REST APIs, optimised relational databases, and took part in Agile Scrum ceremonies and code reviews.':'Conception, développement et maintenance d’applications web d’entreprise avec Spring Boot et Angular. Création d’API REST, optimisation de bases relationnelles, participation aux cérémonies Scrum et aux revues de code.',
     'Computer engineering, with coursework and projects concentrated on cloud-native architecture, distributed systems and applied AI.':'Formation en informatique, avec des projets consacrés aux architectures cloud-native, aux systèmes distribués et à l’IA appliquée.',
     'Bachelor’s in software engineering — algorithms, databases, software architecture and web development.':'Licence en génie logiciel : algorithmique, bases de données, architecture logicielle et développement web.',
     'Let’s build something.':'Construisons ensemble.',
-    "Available for Full Stack PHP / Vue.js roles, internships and freelance work — remote or on-site in Tunisia. I usually reply within a day.":"Disponible pour des postes de développeur Full Stack PHP / Vue.js, des stages et des missions freelance, à distance ou sur site en Tunisie. Je réponds généralement sous un jour.",
+    'Available for engineering roles, internships and freelance work — remote or on-site in Tunisia. I usually reply within a day.':'Disponible pour des postes d’ingénieur, des stages et des missions freelance, à distance ou sur site en Tunisie. Je réponds généralement sous un jour.',
     'Email':'E-mail', 'Phone':'Téléphone', 'Based in':'Localisation', 'Your name':'Votre nom', 'Subject':'Objet', 'Message':'Message',
     'Compose message':'Rédiger le message',
     'This form opens your own mail client — nothing is stored or sent from this page.':'Ce formulaire ouvre votre messagerie. Aucune donnée n’est enregistrée ou envoyée depuis cette page.',
-    "Full Stack PHP / Vue.js role at…":"Poste Full Stack PHP / Vue.js chez…",
+    'Backend / DevOps role at…':'Poste Backend / DevOps chez…',
     "A line or two about what you're working on.":'Quelques mots sur votre projet ou votre opportunité.',
     'Please fill in your name, email and message.':'Veuillez renseigner votre nom, votre e-mail et votre message.',
     'That email address doesn’t look right.':'Cette adresse e-mail ne semble pas valide.',
@@ -49,11 +49,13 @@
     'All work':'Tous les projets', 'Full breakdown':'Voir les détails', 'Flagship':'Projet phare', 'Ongoing':'En cours', 'Stack':'Technologies',
     'Close':'Fermer', 'Switch to dark mode':'Activer le thème sombre', 'Switch to light mode':'Activer le thème clair',
     'Filter projects by specialization':'Filtrer les projets par spécialisation', 'Sections':'Rubriques',
+    'Software Engineer — Full-Stack, .NET, DevOps and AI':'Ingénieur logiciel — Full-Stack, .NET, DevOps et IA',
     'Portrait of Amine Bouallegue':'Portrait d’Amine Bouallegue',
     'Invoice with LayoutLMv3 field predictions boxed and labelled — supplier, client, line items, totals.':'Facture avec les champs prédits par LayoutLMv3 : fournisseur, client, lignes et totaux.',
     'Sign-in screen of the enterprise management and invoicing software.':'Écran de connexion du logiciel de gestion d’entreprise et de facturation.',
     'Modern data platform dashboard with pipeline runs, data quality and monitoring.':'Tableau de bord de la plateforme de données : exécutions des pipelines, qualité des données et supervision.',
     'Résumé':'CV', 'Download the PDF, or print this page':'Téléchargez le PDF ou imprimez cette page',
+    'Software Engineer · DevOps, AI & Full-Stack Development':'Ingénieur logiciel · DevOps, IA et développement Full-Stack',
     'Experience & education':'Expérience et formation', 'Selected projects':'Sélection de projets', 'Technical skills':'Compétences techniques',
     'Download the PDF':'Télécharger le PDF', 'Print this page':'Imprimer cette page',
     'Enterprise web applications on Spring Boot and Angular; REST APIs, relational database optimisation, Agile Scrum code reviews.':'Applications web d’entreprise avec Spring Boot et Angular ; API REST, optimisation des bases relationnelles et revues de code en équipe Scrum.',
@@ -64,7 +66,7 @@
     'CI/CD pipelines, Docker and Kubernetes, infrastructure as code, and the monitoring stack that tells you when it breaks.':'Pipelines CI/CD, Docker, Kubernetes, infrastructure en tant que code et supervision pour identifier les incidents.',
     'RAG systems, multi-agent orchestration, OCR and document extraction, plus computer-vision models with explainability.':'Systèmes RAG, orchestration multi-agents, OCR, extraction documentaire et modèles de vision par ordinateur explicables.',
     'Batch and streaming pipelines — Airflow, Spark, Kafka, dbt — landing in warehouses analysts can actually use.':'Pipelines batch et streaming avec Airflow, Spark, Kafka et dbt, alimentant des entrepôts exploitables par les analystes.',
-    "PHP and Vue.js — secured REST APIs, interactive interfaces, and web applications people work in daily.":"PHP et Vue.js : API REST sécurisées, interfaces interactives et applications web utilisées au quotidien."
+    'Spring Boot, ASP.NET Core and Angular/React — secured REST APIs, real-time features, and interfaces people work in daily.':'Spring Boot, ASP.NET Core et Angular/React : API REST sécurisées, fonctionnalités temps réel et interfaces utilisées au quotidien.'
   };
   /* Same project order as PROJECTS. Each translation covers the original summary
      and every detail paragraph; no project facts or technologies are added. */
@@ -72,7 +74,7 @@
     ['Plateforme de facturation électronique automatisant le cycle complet, avec extraction LLM/OCR et agents IA signalant les anomalies avant validation humaine.',[
       'Plateforme d’entreprise automatisant le cycle complet de facturation électronique : ingestion, extraction par IA, validation, approbation et archivage.',
       'Développement du module d’extraction LLM/OCR en Python et FastAPI, avec des agents IA qui signalent les anomalies avant la revue humaine, et conception d’une API REST sécurisée par JWT et contrôle d’accès par rôles.',
-      'Le tableau de bord Vue.js propose des filtres dynamiques et des indicateurs sur les factures à approuver. La plateforme est conteneurisée avec Docker Compose, automatisée par GitHub Actions et supervisée en continu, avec une sortie XML conforme aux exigences.'
+      'Le tableau de bord Angular propose des filtres dynamiques et des indicateurs sur les factures à approuver. La plateforme est conteneurisée avec Docker Compose, automatisée par GitHub Actions et supervisée en continu, avec une sortie XML conforme aux exigences.'
     ]],
     ['Architecture de sept microservices, messagerie événementielle, déploiement Kubernetes avec Helm et observabilité complète.',[
       'Architecture distribuée couvrant l’authentification, les utilisateurs, le catalogue, les commandes, les stocks, les notifications et une passerelle API. Les services échangent des événements RabbitMQ et disposent chacun de leur base de données.',
@@ -115,9 +117,9 @@
       'Solution complète d’observabilité pour les applications distribuées et les infrastructures conteneurisées.',
       'Collecte des métriques, traces distribuées et agrégation des journaux pour identifier les problèmes de performance et améliorer la disponibilité, avec tableaux de bord personnalisés et alertes.'
     ]],
-    ['Gestion collaborative des projets et tâches avec synchronisation WebSockets, gestion des rôles et tableaux de bord de productivité.',[
-      'Plateforme collaborative de gestion des projets, tâches et workflows avec synchronisation en temps réel via WebSockets.',
-      'Gestion des rôles et permissions, notifications instantanées, suivi des tâches et tableaux de bord, sur une API REST PHP sécurisée et une interface Vue.js.'
+    ['Gestion collaborative des projets et tâches avec synchronisation SignalR, gestion des rôles et tableaux de bord de productivité.',[
+      'Plateforme collaborative de gestion des projets, tâches et workflows avec synchronisation en temps réel via SignalR.',
+      'Gestion des rôles et permissions, notifications instantanées, suivi des tâches et tableaux de bord, sur une API REST ASP.NET Core sécurisée et une interface Angular.'
     ]],
     ['Gestion des dossiers médicaux avec architecture REST, contrôle d’accès par rôles et authentification Spring Security/JWT.',[
       'Plateforme sécurisée de gestion des dossiers médicaux électroniques.',
@@ -125,11 +127,11 @@
     ]],
     ['Application RH couvrant les employés, services, contrats, congés, recrutements et évaluations.',[
       'Application RH complète pour la gestion des employés, services, contrats, congés, recrutements et évaluations de performance.',
-      'API REST PHP et interface Vue.js, avec authentification par rôles et JWT, et tableaux de bord RH sur l’ensemble des données.'
+      'Authentification par rôles avec ASP.NET Identity et JWT, et tableaux de bord RH sur l’ensemble des données.'
     ]],
-    ['ERP multi-module : utilisateurs, clients, fournisseurs, produits, stocks, achats, ventes et rapports, avec WebSockets et Redis.',[
+    ['ERP multi-module : utilisateurs, clients, fournisseurs, produits, stocks, achats, ventes et rapports, avec SignalR et Redis.',[
       'Plateforme ERP couvrant les utilisateurs, clients, fournisseurs, produits, stocks, achats, ventes et rapports.',
-      'API REST PHP et interface Vue.js : opérations CRUD complexes entre les modules, notifications en temps réel avec WebSockets et cache Redis pour les données fréquemment consultées.'
+      'Opérations CRUD complexes entre les modules, notifications en temps réel avec SignalR et cache Redis pour les données fréquemment consultées.'
     ]],
     ['Analyse de jeux de données en langage naturel : un LLM génère des statistiques, visualisations et rapports.',[
       'Plateforme conversationnelle permettant aux utilisateurs métier d’interroger leurs jeux de données en langage naturel via un LLM.',
@@ -241,7 +243,7 @@
       });
     });
     apply(document.body);
-    if (REDUCED) document.getElementById('tline').textContent = translate('Full Stack PHP / Vue.js Developer');
+    if (REDUCED) document.getElementById('tline').textContent = translate('Software Engineer');
     try { localStorage.setItem('portfolio-language',language); } catch (_) {}
     observe();
   }
